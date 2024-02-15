@@ -23,7 +23,7 @@ import org.xianerie.xianierie.service.UserService;
 
 @RestController 
 @RequestMapping("admin") 
-@CrossOrigin(origins = {"http://127.0.0.1:5501"}, methods = {RequestMethod.GET, RequestMethod.PUT, RequestMethod.POST, RequestMethod.DELETE})
+@CrossOrigin(origins = {"https://xanerie.onrender.com"}, methods = {RequestMethod.GET, RequestMethod.PUT, RequestMethod.POST, RequestMethod.DELETE})
 public class UserController {
 	
 	private UserService userService;

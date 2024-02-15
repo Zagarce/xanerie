@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display&family=Roboto:wght@400;500;700&family=Pinyon+Script&display=swap');
+
+:root {
+    --soft-pink: #FAD9C9;
+    --dark-pink: #E8B893;
+    --salmon: #EBCE98;
+    --soft-green: #CACB9C;
+    --main-ocre: #C6A043;
+    --main-text: #2E2D28;
+    --main-beige: #FAF4E4;
+    --main-white: #FFFFFF;
+    --especial-font: 'Playfair Display', serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+}
+
+
+/**GENERALES*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: var(--montserrat-font);
+    color: var(--main-text);
+    background-color: transparent;
+    margin: 0;
+}
+
+button{
+    height: 50px;
+    display:inline-block;
+    padding:0px 20px;
+    font-family: var(--montserrat-font);
+    font-size: 15px;
+}
+
+.btn--whiteline{
+    color: var(--main-white);
+    background-color: transparent;
+    border: solid var(--main-white) 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.btn--whiteline:hover{
+    border: none;
+    background-color: rgba(255,255,255,.2);
+    transition: background-color 0.5s;
+    font-weight: 500;
+}
+
+/*!CORRECCIONES*/
+.row{
+    width: 100%;
+}
+
+/**FRAME SUPERIOR, ROSTROS Y BOTONES*/
+/*col 1*/
+#frame--superior{
+    background-color: var(--main-text);
+}
+
+#image--cabecera{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#nutre--text{
+    border: purple 2px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+/*!NUEVO*/
+.main--title { /*!ESTILOS DE EL MAIN TILE "NUTRE TU PIEL*/
+    font-family: var(--especial-font);
+    font-size: 80px;
+    position: relative;
+    color: var(--main-white);
+    width: 90%;
+}
+
+/*!NUEVO*/
+#xan--text{
+    margin-left: 5%;
+    margin-bottom: 3%;
+    color: var(--main-white);
+    width: 50%;
+}
+
+
+/*Col 2*/
+#contenedor--col2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50%;
+    margin-bottom: 5%;
+}
+
+#text--col2{
+    margin-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: var(--main-white);
+    font-family: var(--roboto-font);
+    font-size: 21px;
+}
+
+/**SECOND FRAME*/
+#secondframe {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-pink);
+}
+
+#gralcont--framesec {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* COL1 */
+#framesec--col1 {
+    background-color: #e98e77;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#text--framesec {
+    color: var(--main-white);
+    font-family: var(--roboto-font);
+    font-size: 21px;
+    text-align: center;
+    padding: 10%;
+}
+
+/* COL2 */
+#framesec--col2 {
+    position: relative; /* Añadido para posicionar el degradado sobre la imagen */
+    width: 40%;
+    flex: 1;
+}
+
+#contimg--framesec {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+#img--framesec {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Degradado sobre la imagen
+#framesec--col2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.09) 100%);
+    pointer-events: none; /* Para que el degradado no interfiera con eventos
+} */
+
+
+
+
+
+/**FRAME GOTERO Y TEXTURA*/
+/*Gral frame*/
+#frame--mid{
+    background-color: var(--main-beige);
+    height: 540px;
+}
+
+/*Textura dorada*/
+#contimg--texture{
+    height: 540px;
+    width: 49.2%;
+    position: absolute;
+}
+
+#img--texture{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/*Textura serum*/
+#cont--serum{
+    display: flex;
+    height: 70%;
+    width: 55%;
+    position: relative;
+    padding-top: 12%;
+    margin-left: 40%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#img--serum{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#contcaption--serum{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2%;
+}
+
+#textcaption--serum{
+    color: var(--main-white);
+    font-family: var(--montserrat-font);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+
+/**FRAME "VER MAS"*/
+#frame--bottom{
+    background-color: var(--main-text);
+    height: 200px;
+    
+}
+
+#bottom--content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#bottom--text{
+    color: var(--main-white);
+    margin-top: 6%;
+    text-align: center;
+    font-family: var(--roboto-font);
+    font-size: 21px;
+}
+
+
+/**FINAL SECTION*/
+#final{
+    background-color: var(--main-beige);
+}
+#final--title{
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+#texto--final{
+    color: var(--main-text);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: var(--montserrat-font);
+}
+
+.bullets--container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 2%;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 2%;
+}
+
+.text--links{
+    font-family: var(--roboto-font);
+    color: var(--main-text);
+}
+
+
+/**RESPONS 990PX PARA IMAGENES*/
+@media screen and (max-width: 990px){
+    /**FIRST SECTION ROSTROS Y BOTONES*/
+    #contenedor--col2{
+        margin-top: 5%;
+    }
+
+    #serum{
+        margin-top: 30%;
+    }
+    #supcir{
+        display: none;
+    }
+
+
+    /**MID FRAME, GOTERO Y TEXTURA*/
+    #cont--serum{
+        padding-top: 20%;
+    }
+    #bottom--text{
+        margin-left: 2%;
+        margin-right: 2%;
+     }
+}
+
+/**RESPONS 720 PARA MOBILE*/
+
+@media screen and (max-width: 720px){
+.btn--whiteline{
+    font-size: 17px;
+}
+
+.main--title{
+    font-size: 55px;
+}
+
+#text--col2{
+    font-size: 17px;
+}
+/**SECOND SECTION*/
+#text--framesec {
+font-size: 17px;
+}
+
+ /**MID FRAME, GOTERO Y TEXTURA*/
+ #bottom--text{
+    font-size: 17px;
+    margin-left: 5%;
+ }
+
+ /*!NUEVO*/
+ #textcaption--serum{
+    font-size: 20px;
+ }
+
+ /**FINAL SECTION*/
+ #texto--final{
+    font-size: 25px;
+ }
+}

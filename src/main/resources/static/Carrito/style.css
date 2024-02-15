@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display&family=Roboto:wght@400;500;700&family=Pinyon+Script&display=swap');
+
+:root {
+    --soft-pink: #FAD9C9;
+    --dark-pink: #E8B893;
+    --salmon: #EBCE98;
+    --soft-green: #CACB9C;
+    --main-ocre: #C6A043;
+    --main-text: #2E2D28;
+    --main-beige: #FAF4E4;
+    --main-white: #FFFFFF;
+    --especial-font: 'Playfair Display', serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container-fluid {
+    font-family: var(--montserrat-font);
+}
+
+#total{
+    margin-right: 20px;
+}
+.icon-citi {
+    margin-right: 18px;
+    height: 40px;
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+.form-container {
+    border-radius: 20px;
+    box-shadow: 5px 7px 18px 3.5px rgba(192, 192, 192, 0.384);  /*!Cambie sh*/
+    background-color: #ffffff;
+    margin-bottom: 10%;
+}
+
+.carrito-container {
+    margin-top: 30px;
+
+}
+
+#total {
+    font-weight: bold;
+}
+
+#marca {
+    font-family: 'Pinyon Script';
+    font-size: x-large;
+}
+
+#efectivo, #transferencia, .hidden{
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    margin-bottom: 10px; 
+}
+
+/* Estilos del producto en el carrito (falta ajustar detalles) */
+.item-producto {
+    box-shadow: 5px 7px 18px 3.5px rgba(192, 192, 192, 0.384);  /*!Cambie sh*/
+    border-radius: 20px;
+    border:rgba(192, 192, 192, 0.384) 1px;
+    margin: 3% 10% 3%;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 10px;
+    grid-template-columns:
+        auto;
+    grid-template-areas:
+        "img"
+        "texto"
+        "precio";
+    box-shadow: 2px 5px 8px rgba(151, 151, 151, 0.24);
+}
+@media (max-width:767px) and (min-width:332px){
+    .item-producto {
+        grid-template-columns:auto auto;
+        grid-template-areas:
+        "contador img precio" 
+        "texto bttn";
+        margin: 3% 3%;
+    }
+}
+
+.contador{
+    grid-area:contador;
+}
+
+.img {
+    grid-area: img;
+    margin: 0%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.texto {
+    grid-area: texto;
+    text-align: center;
+}
+
+.precio {
+    grid-area: precio;
+    display: flex;
+    justify-content: center;
+    font-family: var(--montserrat-font);
+    font-weight: bold;
+}
+
+/* Estilos del boton eliminar */
+.bttn {
+    display: flex;
+    justify-content: center;
+}
+
+.button-eliminar {
+    grid-area: bttn;
+    height: 30px;
+    display: inline-block;
+    padding: 0px 20px;;
+    font-family: var(--montserrat-font);
+    font-size: 10px;
+}
+
+.btn-guardar{
+    height: 50px;
+    display:inline-block;
+    padding:0px 20px;
+    font-family: var(--montserrat-font);
+    font-size: 15px;
+    margin: 10px 0px;
+}
+
+.btn--solidbk{
+    color: var(--main-white);
+    background-color: var(--main-text);
+    border: none;
+    border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn--solidbk:hover{
+    background-color:var(--dark-pink);
+    transition: background-color 0.5s;
+    font-weight: 500;
+}
+
+.contador {
+    font-family: var(--roboto-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 0px;
+}
+
+.numeral, .button-contador {
+    font-family: var(--roboto-font);
+    background-color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.incrementar, .decrementar {
+    color: var(--main-text);
+    font-size: large;
+}
+.incrementar:hover, .decrementar:hover{
+    color: var(--main-ocre)
+}

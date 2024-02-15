@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display&family=Roboto:wght@400;500;700&family=Pinyon+Script&display=swap');
+:root {
+    --soft-pink: #FAD9C9;
+    --dark-pink: #E8B893;
+    --salmon: #EBCE98;
+    --soft-green: #CACB9C;
+    --main-ocre: #C6A043;
+    --main-text: #2E2D28;
+    --main-beige: #FAF4E4;
+    --main-white: #FFFFFF;
+    --especial-font: 'Playfair Display', serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+}
+
+#marca{
+    font-family: 'Pinyon Script';
+    font-size: xx-large;
+}
+
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--montserrat-font);
+}
+
+.title{
+    font-family: var(--montserrat-font);
+    position:relative;
+    margin: 1% 4% 10px;
+    font-weight: bolder;
+}
+
+.container-img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/*.w-100{
+    max-height: 600px;
+    max-width: 80%;
+    }*/
+
+.grid-tipo-piel{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "area1 area2 area3";
+    width: auto;
+    height: auto;
+    border:solid --bs-dark-bg-subtle 1px;
+    font-family: var(--montserrat-font);
+    color: var(--main-white);
+    justify-content: center;
+    margin: 2% 4%;
+    gap: 20px;
+}
+
+.responsive{
+    background-color: var(--main-ocre);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;    
+}
+
+@media(max-width: 556px){
+    .grid-tipo-piel{
+       display: flex;
+       flex-direction: column;
+       max-width: 100%;
+       margin: 4%;
+   }
+   .responsive{
+       height: auto;
+       min-height: auto;
+   }
+}
+
+.local-link{
+    text-decoration: none;
+    color: white;
+}
+.local-link:hover{
+    color:var(--main-beige);
+    font-weight: bold;
+}
+
+#skin1{
+    grid-area: area1;
+}
+#skin2{
+    grid-area: area2;
+}
+#skin3{
+    grid-area: area3;
+}
+
+.skin-title{
+    font-family: var(--montserrat-font);
+    background-color: var(--main-text);
+    color: var(--main-white);
+    margin: 0% 4%;
+    padding: 8px 8%;
+    border-radius: 5px;
+}
+
+.linea{
+    border: solid var(--main-text) 1px;
+    height: 1px;
+    width: auto;
+    margin: 3% 8%;
+}
+
+.item-producto{
+    margin: 3% 10% 3%;
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "img texto"
+    "precio bttn";
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 10px;
+}
+.item-producto-2{
+    margin: 3% 10% 3%;
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "texto img"
+    "bttn precio";
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 10px;
+}
+
+.item-producto:hover, .item-producto-2:hover{
+    /* border: solid var(--salmon) 1px; */
+    box-shadow: 
+    /* Sombra derecha */ 20px 20px 60px 0px rgba(139, 139, 139, 0.15),
+    /* Sombra izquierda */-20px -20px 60px 0px rgba(139, 139, 139, 0.15);
+    transition: box-shadow 0.5s;
+}
+
+@media (max-width: 768px) {
+    .w-100{
+        max-height: 600px;
+        max-width: 90%;
+        }
+    .item-producto, .item-producto-2 {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "img"
+        "texto"
+        "precio"
+        "bttn";
+        margin: 3% 3%;
+    }
+    
+}
+
+.texto{
+    grid-area: texto;
+}
+.img{
+    grid-area: img;
+    margin: 0%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.precio{
+    grid-area: precio;
+    display: flex;
+    justify-content: center;
+    font-family: var(--montserrat-font);
+    font-weight: bold;
+}
+
+.button-carrito{
+    height: 50px;
+    display:inline-block;
+    padding:0px 20px;
+    font-family: var(--montserrat-font);
+    font-size: 15px;
+}
+
+.bttn{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.btn--solidbk{
+    color: var(--main-white);
+    background-color: var(--main-text);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn--solidbk:hover{
+    background-color:var(--main-ocre);
+    transition: background-color 0.5s;
+    font-weight: 500;
+}

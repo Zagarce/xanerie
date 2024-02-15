@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display&family=Roboto:wght@400;500;700&family=Pinyon+Script&display=swap');
+
+:root {
+    --soft-pink: #FAD9C9;
+    --dark-pink: #E8B893;
+    --salmon: #EBCE98;
+    --soft-green: #CACB9C;
+    --main-ocre: #C6A043;
+    --main-text: #2E2D28;
+    --main-beige: #FAF4E4;
+    --main-white: #FFFFFF;
+    --especial-font: 'Playfair Display', serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--montserrat-font);
+    background-color: var(--main-white);
+}
+
+#title--form{
+    color: var(--main-text);
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+#title2s--form{
+    color: var(--main-text);
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+h1 {
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+}
+
+/* Botones de Iniciar sesión / Crear cuenta*/
+#btn--solidbk--iniciarSesion, #btn--solidbk--crearCuenta, #btn--mostrarCrearCuenta { /*Agregué diferentes IDs a los botones para eliminar la advertencia de id repetidos*/
+    color: var(--main-white);
+    background-color: var(--main-text);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#btn--solidbk--iniciarSesion:hover, #btn--solidbk--crearCuenta:hover, #btn--mostrarCrearCuenta:hover {
+    border: none;
+    background-color: var(--main-ocre);
+    transition: background-color 0.5s;
+    font-weight: 500;
+}
+/*Estilo de un link*/
+#linkFAQ {
+    color: var(--main-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#linkFAQ:hover {
+    color: var(--main-ocre);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Estilos de bootstrap para formulario */
+.form-login {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--main-text);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--main-white);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/*Estilos para mostrar y ocultar las opciones de iniciar sesión o crear cuenta*/
+.container-form .formulario{
+    display: none;
+}
+
+.container-form .formulario:nth-child(1){
+    display: block;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .form-login {
+        transition: none;
+        color: var(--main-text);
+    }
+}
+
+.form{
+    border-radius: 20px;
+    box-shadow: 5px 7px 18px 1.5px rgba(192, 192, 192, 0.384);  /*!Cambie sh*/
+    background-color: var(--main-white);
+    padding-top: 2%;
+}
+
+.form-login[type=file] {
+    overflow: hidden;
+}
+
+.form-login[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+
+.form-login:focus {
+    color: var(--main-text);
+    background-color: var(--main-white);
+    /* border-color: #FAD9C9; */
+    border-color: var(--salmon);
+    outline: 0;
+   /*  box-shadow: 0 0 0 0.25rem var(--salmon); */
+}
+
+#noSoyRobot {
+    cursor: pointer;
+    background-color: var(--main-white);
+    appearance: none;
+    border: 0.5px solid #CACB9C;
+    scrollbar-shadow-color: var(--main-text);
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+#noSoyRobot:checked {
+    background-color: var(--dark-pink);
+    color: #2E2D28;
+    box-shadow: 0 0 0 0.25rem var(--salmon);
+}
+
+#noSoyRobot:focus {
+    border-color: #FAD9C9;
+    border-color: var(--salmon);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--salmon);
+}
+
+#aceptTermYCond {
+    cursor: pointer;
+    background-color: var(--main-white);
+    appearance: none;
+    border: 0.5px solid #CACB9C; 
+    scrollbar-shadow-color: var(--main-text);
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+#aceptTermYCond:checked {
+    background-color: var(--dark-pink);
+    color: #2E2D28;
+    box-shadow: 0 0 0 0.25rem var(--salmon);
+}
+
+#aceptTermYCond:focus {
+    border-color: #FAD9C9;
+    border-color: var(--salmon);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--salmon);
+}
+
+@media screen and (max-width: 620px){
+    
+    .form{
+        padding-bottom: 2%;
+    }
+}
