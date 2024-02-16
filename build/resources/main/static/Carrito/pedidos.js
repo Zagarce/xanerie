@@ -111,25 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const submitButton = e.submitter;  // Obtener el botón que inició el evento
-        try {
-            if (submitButton.id === 'btnTransferencia' && validarFormulario()) {
-                imprimirJSON();
-            } else if (submitButton.id === 'btnEfectivo') {
 
-                imprimirJSON();
-                const nuevoAviso = document.createElement("p");
-                nuevoAviso.innerHTML = `Tu pedido ha sido registrado.<br> <a class="text-decoration-none" href="http://wa.me/525620417120"
-    target="_blank" rel="noopener noreferrer">Contáctanos para gestionar la entrega. <img src="../assets/whatsapp.png"></a>`;
-                nuevoAviso.classList.add('alert', 'alert-success');
-                const pedidoEfectivo = document.getElementById('pedidoEfectivo');
-                const avisos1 = pedidoEfectivo.querySelectorAll('.alert');
-                avisos1.forEach(aviso => aviso.remove());
-                pedidoEfectivo.appendChild(nuevoAviso);
-            }
-        } catch (error) {
+        if (submitButton.id === 'btnTransferencia' && validarFormulario()) {
+            imprimirJSON();
+        } else if (submitButton.id === 'btnEfectivo') {
+            imprimirJSON();
             const nuevoAviso = document.createElement("p");
-            nuevoAviso.innerHTML = `¡Inicia sesión para pagar tu carrito!`;
-            nuevoAviso.classList.add('alert', 'alert-danger');
+            nuevoAviso.innerHTML = `Tu pedido ha sido registrado.<br> <a class="text-decoration-none" href="http://wa.me/525620417120"
+    target="_blank" rel="noopener noreferrer">Contáctanos para gestionar la entrega. <img src="../assets/whatsapp.png"></a>`;
+            nuevoAviso.classList.add('alert', 'alert-success');
             const pedidoEfectivo = document.getElementById('pedidoEfectivo');
             const avisos1 = pedidoEfectivo.querySelectorAll('.alert');
             avisos1.forEach(aviso => aviso.remove());
@@ -156,13 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
             productosCarrito: carrito.map(producto => ({
                 id_producto: producto.id_producto,
                 nombre: producto.nombre,
-                cantidad: producto.cantidad,
-                imagen: producto.img
+                cantidad: producto.cantidad
             }))
         };
 
         pedidos.push(nuevoPedido);
-
+        
         sessionStorage.removeItem('carrito')
         sessionStorage.setItem('idPedido', idPedido.toString());
         sessionStorage.setItem('pedidos', JSON.stringify(pedidos));

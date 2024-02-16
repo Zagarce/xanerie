@@ -38,19 +38,14 @@ function previewImage() {
 
         reader.onload = function (e) {
             previewImage.src = e.target.result;
-
-            // Almacena la imagen en sessionStorage
-            sessionStorage.setItem('userImage', e.target.result);
         };
 
         reader.readAsDataURL(file);
     }
 }
 
-// Restaura la imagen desde sessionStorage al cargar la página
-document.addEventListener('DOMContentLoaded', function () {
-    const storedImage = sessionStorage.getItem('userImage');
-    if (storedImage) {
-        document.getElementById('preview-image').src = storedImage;
-    }
-});
+
+
+
+
+

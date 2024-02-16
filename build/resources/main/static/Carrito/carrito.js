@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalPrecio = carrito.reduce((total, producto) => total + parseFloat(producto.precio * producto.cantidad), 0);
     // Insertamos el total en su div
     const totalElemento = document.getElementById('total');
-    totalElemento.innerHTML = `<h5>Total: $${totalPrecio.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</h5>`;
+    totalElemento.innerHTML = `<h5>Total: $${totalPrecio.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</h4>`;
   }
   calcularTotal();
 

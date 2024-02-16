@@ -114,6 +114,7 @@ const imprimirJSON = () => {
     const stockValor = stock.value.trim();
     
         const nuevoProducto = {
+            // Falta como agregar el atributo id_producto al nuevo objeto
             "nombre": nombreValor,
             "img": imagenValor,
             "precio": `$ ${precioValor}.00`,
@@ -128,6 +129,7 @@ const imprimirJSON = () => {
         console.log("El objeto nuevo creado es ", nuevoProducto)
         
         listaProductos.push(nuevoProducto);
- 
+    
+        //para comprobar que se ha agregado el nuevo producto al array imprimimos en consola
         console.log(listaProductos); //12 objetos
     }
