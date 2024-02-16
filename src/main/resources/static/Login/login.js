@@ -34,7 +34,7 @@ function validarExistenciaEmail(email) {
 
     if (users && users.email === email) {
         return true;
-    }
+    } else
 
     return false;
 }
@@ -90,10 +90,10 @@ function validarInput(inputId, regex, mensajeError) {
     if (!regex.test(inputValue)) {
         mostrarAlerta2(mensajeError, 'danger');
         return false;
-    }
-
+    } else{
     mostrarAlerta2('El input cumple con el formato.', 'success');
     return true;
+    }
 }
 
 // Función para validar que las contraseñas coincidan
@@ -103,15 +103,15 @@ function validarContraseñaRepetida() {
 
     // Verificar complejidad de la contraseña (requiere al menos una mayúscula, una minúscula, un número y un caracter especial)
     var complejidadContraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]+$/;
-    if (!complejidadContraseña.test(password) && password.length < 8) {
-        mostrarAlerta2('La contraseña debe tener 8 caracteres y contener al menos una mayúscula, una minúscula, un número y un caracter especial.', 'danger');
+    if (!complejidadContraseña.test(password) || password.length < 8) {
+        mostrarAlerta2('La contraseña debe tener 8 caracteres y contener al menos una mayúscula, una minúscula, un número y un caracter especial (!@#$%^&*()_+).', 'danger');
         return false;
     }
-    if (password !== passwordRepeat) {
+    else if (password !== passwordRepeat) {
         mostrarAlerta2('Las contraseñas no coinciden. Por favor, verifica.', 'danger');
         return false;
-    }
-    mostrarAlerta2('Contrseña válida.', 'success');
+    } else
+    mostrarAlerta2('Contraseña válida.', 'success');
     return true;
 }
 
